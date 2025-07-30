@@ -1,6 +1,5 @@
 from fastapi import APIRouter
 
-
 # 健康检查路由
 health_router = APIRouter(prefix="", tags=["Health Check"])
 

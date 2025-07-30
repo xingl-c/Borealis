@@ -1,12 +1,13 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from app.core.lifespan import lifespan
 from app.api.v1.docs import docs_router
 from app.api.v1.health import health_router
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(docs_url=None, redoc_url=None)
+    app = FastAPI(lifespan=lifespan, docs_url=None, redoc_url=None)
     app.openapi_version = "3.0.0"
     app.include_router(docs_router)
     app.include_router(health_router)
