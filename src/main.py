@@ -1,6 +1,7 @@
 from app import create_app
 from app.core.settings import settings
 
+# 创建 FastAPI 应用实例
 app = create_app()
 
 if __name__ == "__main__":
