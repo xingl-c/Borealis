@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Borealis"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+    "pydantic-settings>=2.10.1",
+]
 
 [[tool.uv.index]]
 name = "tsinghua"
